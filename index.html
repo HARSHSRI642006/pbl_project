@@ -1,147 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PBL Presentation | 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { background-color: #020617; color: #f8fafc; font-family: sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1); }
-    </style>
+<meta charset="UTF-8">
+<title>PBL Presentation | 2026</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body { background-color:#020617; color:#f8fafc; font-family:sans-serif; }
+.glass { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); }
+
+/* TIMER */
+#timerContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+</style>
 </head>
-<body>
+
+<body onload="startTimer()">
+
+<!-- TIMER -->
+<div id="timerContainer">
+    <span id="displayTime">00:00</span>
+</div>
 
 <main class="max-w-6xl mx-auto px-6 py-16 space-y-24">
 
-    <!-- TITLE SECTION -->
-    <section class="text-center">
-        <div class="text-sm text-gray-400 mb-4">ID: 2427030300</div>
-        <h1 class="text-5xl font-bold mb-6 text-blue-400">
-            Understanding Why Users Ignore Data Breach Warnings
-        </h1>
-        <p class="max-w-3xl mx-auto text-lg text-gray-300">
-            This project studies how users react to data breach notifications and 
-            why many people ignore security warnings even after being alerted.
-        </p>
-    </section>
+<section class="text-center">
+<div class="text-sm text-gray-400 mb-4">ID: 2427030300</div>
+<h1 class="text-5xl font-bold mb-6 text-blue-400">
+Understanding Why Users Ignore Data Breach Warnings
+</h1>
+<p class="max-w-3xl mx-auto text-lg text-gray-300">
+This project studies how users react to data breach notifications and why many people ignore security warnings even after being alerted.
+</p>
+</section>
 
-    <!-- PROBLEM SECTION -->
-    <section class="glass p-10 rounded-2xl">
-        <h2 class="text-3xl font-bold mb-6 text-blue-300">Problem Statement</h2>
-        <p class="text-gray-300 leading-relaxed">
-            Many users receive data breach alerts but do not take action such as 
-            changing passwords or enabling security features. This increases their 
-            risk of account compromise. The project aims to understand the behavioral 
-            reasons behind this inaction.
-        </p>
-    </section>
+<section class="glass p-10 rounded-2xl">
+<h2 class="text-3xl font-bold mb-6 text-blue-300">Problem Statement</h2>
+<p>
+Many users receive data breach alerts but do not take action such as changing passwords or enabling security features. This increases their risk. The project aims to understand the behavioral reasons behind this inaction.
+</p>
+</section>
 
-    <!-- LITERATURE + GAP -->
-    <section class="grid md:grid-cols-2 gap-10">
-        <div class="glass p-8 rounded-2xl">
-            <h3 class="text-xl font-bold text-blue-300 mb-4">Literature Review</h3>
-            <p class="text-gray-300">
-                Research studies indicate that users experience "warning fatigue" 
-                and often ignore repeated security alerts. Human-computer interaction 
-                research shows that message clarity, urgency, and design influence 
-                how seriously users take security warnings.
-            </p>
-        </div>
+<section class="grid md:grid-cols-2 gap-10">
+<div class="glass p-8 rounded-2xl">
+<h3 class="text-xl font-bold text-blue-300 mb-4">Literature Review</h3>
+<p>
+Research shows that users experience warning fatigue and often ignore repeated security alerts. Message clarity and design influence how seriously users respond.
+</p>
+</div>
 
-        <div class="glass p-8 rounded-2xl">
-            <h3 class="text-xl font-bold text-purple-300 mb-4">Research Gap</h3>
-            <p class="text-gray-300">
-                Most existing systems focus on detecting breaches but do not analyze 
-                how users respond after being notified. This project focuses on 
-                understanding user behavior at the student level.
-            </p>
-        </div>
-    </section>
+<div class="glass p-8 rounded-2xl">
+<h3 class="text-xl font-bold text-purple-300 mb-4">Research Gap</h3>
+<p>
+Existing tools detect breaches but do not analyze how users respond after being notified. This project focuses on understanding student-level behavior.
+</p>
+</div>
+</section>
 
-    <!-- METHODOLOGY -->
-    <section class="glass p-10 rounded-2xl">
-        <h2 class="text-3xl font-bold mb-8 text-blue-300">Methodology</h2>
+<section class="glass p-10 rounded-2xl">
+<h2 class="text-3xl font-bold mb-8 text-blue-300">Methodology</h2>
+<p><strong>Data Collection:</strong> Anonymous student survey to measure awareness and response behavior.</p>
+<p class="mt-4"><strong>Analysis:</strong> Responses categorized based on awareness, action taken, and risk perception. Basic statistical analysis will be used.</p>
+</section>
 
-        <div class="grid md:grid-cols-2 gap-10">
-            <div>
-                <h4 class="font-bold mb-3 text-blue-200">Data Collection</h4>
-                <p class="text-gray-300">
-                    An anonymous survey will be conducted among students to measure 
-                    awareness level, response behavior, and password habits.
-                </p>
-            </div>
+<section class="glass p-10 rounded-2xl">
+<h2 class="text-3xl font-bold mb-8 text-blue-300">Project Progress</h2>
 
-            <div>
-                <h4 class="font-bold mb-3 text-purple-200">Analysis Method</h4>
-                <p class="text-gray-300">
-                    Responses will be categorized based on awareness, action taken, 
-                    and risk perception. Basic statistical analysis and graphical 
-                    representation will be used.
-                </p>
-            </div>
-        </div>
-    </section>
+<div class="grid md:grid-cols-2 gap-10 items-center">
+<div>
+<canvas id="resultsChart"></canvas>
+</div>
 
-    <!-- RESULTS / PROGRESS -->
-    <section class="glass p-10 rounded-2xl">
-        <h2 class="text-3xl font-bold mb-8 text-blue-300">Project Progress</h2>
+<div>
+<p class="text-xl text-blue-400 font-bold mb-4">40% Completed</p>
+<ul class="list-disc pl-5">
+<li>Literature review completed</li>
+<li>Research questions framed</li>
+<li>Survey draft prepared</li>
+<li>Data collection starting next</li>
+</ul>
+</div>
+</div>
+</section>
 
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <canvas id="resultsChart"></canvas>
-            </div>
-
-            <div class="text-gray-300">
-                <p class="mb-4 font-semibold text-xl text-blue-400">
-                    40% Completed
-                </p>
-                <ul class="list-disc pl-5 space-y-2">
-                    <li>Literature review completed</li>
-                    <li>Research questions framed</li>
-                    <li>Survey draft prepared</li>
-                    <li>Data collection phase starting next</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM -->
-    <section class="text-center pt-10 border-t border-gray-700">
-        <h2 class="text-sm uppercase tracking-widest text-gray-400 mb-8">
-            Academic Credits
-        </h2>
-
-        <p class="text-lg text-gray-300">
-            <strong>Project Guide:</strong> Dr. Vaishali Chauhan
-        </p>
-        <p class="text-lg text-gray-300">
-            <strong>Student:</strong> Harsh Srivastava (2427030300)
-        </p>
-    </section>
+<section class="text-center pt-10 border-t border-gray-700">
+<p><strong>Project Guide:</strong> Dr. Vaishali Chauhan</p>
+<p><strong>Student:</strong> Harsh Srivastava (2427030300)</p>
+</section>
 
 </main>
 
 <script>
-    const ctx = document.getElementById('resultsChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Research Planning', 'Data Collection (Next Phase)'],
-            datasets: [{
-                data: [40, 100],
-                backgroundColor: ['#3b82f6', '#22c55e'],
-                borderRadius: 10
-            }]
-        },
-        options: {
-            plugins: { legend: { display: false } },
-            scales: {
-                y: { beginAtZero: true, max: 100 }
-            }
-        }
-    });
+// TIMER LOGIC
+let sec = 0;
+function startTimer(){
+setInterval(()=>{
+sec++;
+let m = Math.floor(sec/60);
+let s = sec%60;
+document.getElementById("displayTime").innerText =
+m.toString().padStart(2,'0') + ":" + s.toString().padStart(2,'0');
+},1000);
+}
+
+// Chart
+const ctx = document.getElementById('resultsChart').getContext('2d');
+new Chart(ctx,{
+type:'bar',
+data:{
+labels:['Research Planning','Data Collection'],
+datasets:[{
+data:[40,100],
+backgroundColor:['#3b82f6','#22c55e']
+}]
+},
+options:{
+plugins:{legend:{display:false}},
+scales:{y:{beginAtZero:true,max:100}}
+}
+});
 </script>
 
 </body>
